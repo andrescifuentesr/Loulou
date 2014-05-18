@@ -1,0 +1,44 @@
+.module-newsletter {
+	display: none;
+	background: url('../../../img/background-newsletter.jpg') ;
+	padding: 3em 5em;
+	width: 30em;
+	color:$blue-principal;
+	@include mq(tablet) {padding: 3em 1em; width: 370px; text-align: center;}
+	@include mq(phone) {padding: 3em 1em; width: 370px; text-align: center;}
+
+	h1 {
+		text-transform: uppercase;
+	}
+
+	ul {
+		margin: 0;
+	}
+
+	.sml_email, .sml_submit {
+		float: left;
+		@include mq(tablet) {float: none; }
+		@include mq(phone) {float: none; }
+	}
+
+	input[type="text"] {
+		margin-right: 0.5em;
+	}
+
+	input[type="submit"] {
+		background: url('../../../img/button-submit-news.svg') no-repeat;
+		font-family: 'Mohave';
+		font-style: normal;
+		font-weight:  400;
+		font-size: 1em;
+		text-transform: uppercase;
+		color:#fff;
+		padding: .4em 1em .3em 2.5em;
+		border: none;
+		transition: 0.2s background ease-in;
+
+		&:hover {
+			opacity: 0.8;
+		}
+	}
+}

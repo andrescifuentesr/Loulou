@@ -1,0 +1,126 @@
+/*--------------------------------------------------------------
+5.1 Menus socail et langues, Newsletter
+--------------------------------------------------------------*/
+.nav-social {
+	//width: 280px;
+	//float: right;
+	margin-top: 0.5em;
+	@include mq(phone) {margin-top: 0;}
+}
+
+.bt-newsletter {
+	display:block;
+	width: 100%;
+	//margin-bottom: 1em;
+	text-align: center;
+	@include mq(phone) {width: 50%;
+		display:inline-block;
+		vertical-align:top; 
+		text-align:right; 
+		padding-right: 0.5em;
+	}
+
+	a {
+		background: url('../../../img/icon-newstletter.svg') no-repeat center top;
+		display: block;
+		padding-top: 2em;
+		position: relative;
+		font-family: 'Mohave';
+		font-weight:normal;
+		text-transform: uppercase;
+		color:#fff;
+		transition: 0.2s all ease-in;
+		@include mq(phone) {
+			background-position:right top;
+		}
+
+		&:hover {
+			opacity: 0.7;
+		}
+	}
+}
+
+.menu-social{
+	display:block;
+	width: 100%;
+	margin-bottom: 0.5em;
+	@include mq(phone) {
+		width: 50%;
+		display:inline-block;
+		vertical-align:top;
+		margin-top: 0;
+		text-align:left;
+	}
+
+	ul {
+		margin: 0;
+		width: 65px;
+		margin: 0 auto;
+		list-style:none;
+		@include mq(phone) {
+			margin: 0 0 0 0.5em;
+		}
+
+	}
+
+
+	li {
+		float: left;
+		width: 50%;
+		margin-bottom: 0.25em;
+	}
+
+	a {
+		text-indent: -9999px;
+		float: left;
+		display: block;
+		height: 30px;
+		width: 30px;
+		margin-left: 0.3em;
+		transition: 0.2s all ease-in;
+	}
+
+	a[href*="twitter.com"] {
+		background: url('../../../img/icon-twitter.svg') no-repeat center center;
+		text-align: center;
+	}
+
+	a[href*="facebook.com"] {
+		background: url('../../../img/icon-facebook.svg') no-repeat center center;
+		text-align: center;
+	}
+
+	a[href*="instagram.com"] {
+		background: url('../../../img/icon-instagram.svg') no-repeat center center;
+		text-align: center;
+	}
+
+	a[href*="tripadvisor.fr"] {
+		background: url('../../../img/icon-trip-advisor.svg') no-repeat center center;
+		text-align: center;
+	}
+
+	a:hover {
+		opacity: 0.7;
+	}
+}
+
+//==== fallback svg IE8, merci antoine :(
+.no-svg .menu-social  {
+	
+	a[href*="facebook.com"] {
+ 		background-image: url('../../../img/icon-facebook.png');
+ 	}
+
+ 	a[href*="twitter.com"] {
+ 		background-image: url('../../../img/icon-twitter.png');
+ 	}
+
+ 	a[href*="instagram.com"]{
+ 		background-image: url('../../../img/icon-google-plus.png');
+ 	}
+
+ 	a[href*="tripadvisor.fr"]{
+ 		background-image: url('../../../img/icon-trip-advisor.png');
+ 	}
+}

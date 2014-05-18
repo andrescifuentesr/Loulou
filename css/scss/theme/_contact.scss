@@ -1,0 +1,119 @@
+//================
+//page Contact
+.contact {
+
+	h3 {
+		font-family: 'Marcelle Script';
+		font-style:   normal;
+		font-weight:  700;
+		padding-bottom: 0.35em;
+		background: url('../../../img/border-bottom-ball.png') bottom left repeat-x;
+	}
+
+	p {
+		font-size: 0.8em;
+	}
+
+	.image-contact {
+		margin: 0 1em;
+	}
+
+	.map-wrapper {
+		padding-bottom: 0.2em;
+		margin-bottom: 1em;
+		background: url('../../../img/border-bottom-ball.png') bottom left repeat-x;
+	}
+
+	#map_canvas {
+		height: 250px;
+		margin: 1em 0;	
+	}
+}
+
+.wpcf7,
+//#wpcf7-f101-p14-o1 
+	{
+	width:100%;
+
+	span {
+		width: 100%;
+	}
+
+	input[type="text"],
+	input[type="email"],
+	input[type="url"],
+	input[type="password"],
+	input[type="search"],
+	input[type="tel"],
+	textarea {
+		margin-bottom: 1em;
+		width: 100%;
+		padding: 0.5em;
+		border-radius:0;
+		border:1px solid $blue-principal;
+	}
+
+	.first-name input{
+		width: 49%;
+		margin-right: 2%;
+		float: left;
+		@include mq(phone) {width: 100%; margin-right: 0; }
+	}
+
+	.last-name input {
+		margin-right: 0;
+		width: 49%;
+		float: left;
+		@include mq(phone) {width: 100%; margin-right: 0; }
+	}
+
+	input[type="submit"] {
+		text-align: center;
+		margin: 0 auto;
+		display: block;
+		background: url('../../../img/button-send.svg') no-repeat;
+		height: 58px;
+		padding: 0 1em;
+		border:none;
+		font-family: 'Mohave';
+		font-style: normal;
+		font-weight:  400;
+		text-transform: uppercase;
+		color:#fff;
+		position: relative;
+		top:-2em;
+		transition: 0.2s all ease-in;
+
+		&:hover {
+			//background-color: $green-principal;
+			color: #fff;
+		}
+	}
+
+	//placeholder
+	::-webkit-input-placeholder {font-size:0.85em; text-transform: uppercase; color:$blue-principal; font-family: 'Mohave'; font-style: normal; font-weight:  700;}
+	:-moz-placeholder			{font-size:0.85em; text-transform: uppercase; color:$blue-principal; font-family: 'Mohave'; font-style: normal; font-weight:  700;}
+	::-moz-placeholder 			{font-size:0.85em; text-transform: uppercase; color:$blue-principal; font-family: 'Mohave'; font-style: normal; font-weight:  700;}
+	:-ms-input-placeholder 		{font-size:0.85em; text-transform: uppercase; color:$blue-principal; font-family: 'Mohave'; font-style: normal; font-weight:  700;}
+
+	//errors
+	span.wpcf7-not-valid-tip {
+		color: #E22D2D;
+	}
+
+	div.wpcf7-validation-errors {
+		background: $red-principal;
+		color: #fff;
+		border:none;
+		padding:0.5em 0;
+		text-align:center;
+	}
+
+	div.wpcf7-mail-sent-ok {
+		background: $blue-principal;
+		color: #fff;
+		border:none;
+		padding:0.5em 0;
+		text-align:center;
+	}
+}

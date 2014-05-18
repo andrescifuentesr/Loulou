@@ -1,0 +1,84 @@
+.site-content {
+	position:relative;
+}
+
+.hack-border-white {
+	position:absolute;
+	top:0;
+	left:0;
+	right:0;
+	height:15px;
+	background: url('../../../img/background-content-onglet.png') top center;
+}
+
+.template-general {
+	margin-top: 218px; //test
+
+
+
+
+	width:100%;
+	padding: 2em 20%;
+	background: url('../../../img/bg-home.jpg') no-repeat center center;
+	background-size: cover;
+	@include mq(lap) {padding: 2em 15%;}
+	@include mq(tablet) {padding: 2em 5%;}
+	@include mq(phone) {padding: 2em 1.5%;}
+	
+	.site-main {
+		background: #fff;
+		padding: 2em 2em 1em;
+		box-shadow: 0 0 10px #999999;
+		@include mq(tablet) {padding: 2em 2em 1em;}
+		@include mq(phone) {padding: 1em;}
+	}
+
+	.entry-header {
+		margin-bottom: 3em;
+		position: relative;
+	}
+
+	.entry-title {
+		color: $red-principal;
+		font-family: 'Marcelle Script';
+		font-style:   normal;
+		font-weight:  700;
+		text-align: center;
+		background: #fff;
+
+		&::before {
+			content: "";
+			background: url('../../../img/red-band-title.svg');
+			width: 244px;
+			height: 15px;
+			position:absolute;
+			top:50%;
+			left:0;
+			@include mq(lap) {width: 168px;}
+			@include mq(tablet) {width: 137px;}
+			@include mq(phone) {display: none;}
+		}
+
+		&::after {
+			content: "";
+			background: url('../../../img/red-band-title.svg');
+			width: 244px;
+			height: 15px;
+			position:absolute;
+			top:50%;
+			right:0;
+			@include mq(lap) {width: 168px;}
+			@include mq(tablet) {width: 137px;}
+			@include mq(phone) {display: none;}
+		}
+	}
+}
+
+//mmmmmmmmmmmmmmm Reservation
+.post-10 {
+
+	p {
+		text-align: center;
+	}
+
+}

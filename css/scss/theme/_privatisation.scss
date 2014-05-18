@@ -1,0 +1,44 @@
+//================
+//page Réservation
+.post-14  {
+	//width: 30%;
+	position: relative;
+	margin-top: 2em;
+	width: 315px;
+	padding: 2em 3em 0;
+	color:#fff;
+	font-size: 0.7em;
+	background: url('../../../img/background-jays.png') no-repeat;
+	transition: 0.3s all ease-out;
+	//background: url('../../../img/background-jays.png') no-repeat center center;
+	//background-size: cover;
+
+
+	h5 {
+		padding-bottom: 0.5em;
+		text-transform: uppercase;
+		border-bottom: 1px solid $red-principal;
+	}
+
+	.button-jays {
+		position: absolute;
+		display: block;
+		background: url('../../../img/green-arrow-jays.svg') no-repeat;
+		height: 65px;
+		width: 65px;
+		top:35%;
+		right: -52px;
+		cursor: pointer;
+	}
+
+	.wpcf7 {
+
+		input[type="submit"] {
+			top:0;
+		}
+	}
+}
+
+.hide {
+	transform: translate(-95%, 0%);
+}

@@ -1,0 +1,23 @@
+//================
+//Home
+.post-27 {
+
+	h2 {
+		color: $blue-principal;
+		font-family: 'Mohave';
+		font-style:   normal;
+		font-weight:  700;
+		font-size: 1.35em;
+		text-transform:uppercase;
+		text-align: center;
+	}
+
+	p {
+		text-align: center;
+	}
+
+	p:nth-child(3) {
+		margin-top: 2em;
+	}
+
+}
