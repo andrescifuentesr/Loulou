@@ -7,8 +7,7 @@
 	@extend %one-quarter;
 	@extend %tablet--one-third;
 	@extend %phone--one-half;
-	@include mq(tablet) {margin-top: 1em; }
-	@include mq(phone) {margin-top: 1em; }
+	margin-top: 1em;
 
 	img {
 		max-width: 100%;

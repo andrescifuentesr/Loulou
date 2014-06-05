@@ -19,7 +19,7 @@
 #controls { overflow:hidden; height:100%; position:relative; text-align:left; z-index:5; }
 
 //navigation avec les fleches
-#prevslide, #nextslide{ position:absolute; height:96px; width:100px; top:50%; margin-top:-50px; transition: 0.3s all ease-out;}
+#prevslide, #nextslide{ position:absolute; width:70px; height:68px; top:30%; /*margin-top:-68px;*/transition: 0.3s all ease-out;}
 #prevslide{ left:40px; background:url('../../../img/button-prev.svg') no-repeat top center; }
 #nextslide{ right:40px; background:url('../../../img/button-next.svg')  no-repeat top center; }
 #prevslide:active, #nextslide:active{ margin-top:-19px; }

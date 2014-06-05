@@ -12,7 +12,7 @@
 /* Loading
 ***********************/
 .loading {height:20em; width:100%; position:relative; }
-.loading:before {content: ''; display:block; height:50px; width:50px; background: url(../../../img/loader.gif); position:absolute; top:50%; margin-top:-25px; left:50%; margin-left:-25px;}
+//.loading:before {content: ''; display:block; height:50px; width:50px; background: url(../../../img/loader.gif); position:absolute; top:50%; margin-top:-25px; left:50%; margin-left:-25px;}
 .loading .flexslider { opacity:0}
 
 /* Browser Resets
@@ -45,7 +45,12 @@ html[xmlns] .slides {display: block;}
 
 /* FlexSlider Default Theme
 *********************************/
-.flexslider { margin: 0 0 3em; padding: 0 0 60px; background: #fff; position: relative; box-shadow: 1px 1px 5px #666666; zoom: 1; }
+.flexslider {
+	margin: 0 0 0;
+	padding: 0 0 0;
+	position: relative;
+	zoom: 1;
+}
 .flex-viewport { max-height: 2000px; -webkit-transition: all 1s ease; -moz-transition: all 1s ease; -o-transition: all 1s ease; transition: all 1s ease; }
 .loading .flex-viewport { max-height: 300px; }
 .flexslider .slides { zoom: 1;}
@@ -55,34 +60,38 @@ html[xmlns] .slides {display: block;}
 .flex-direction-nav {*height: 0;}
 .flex-direction-nav a  { text-decoration:none;
 	display: block;
-	width: 50px;
-	height: 50px;
-	border-radius: 50px;
-	border: 2px solid #adadad;
+	width: 70px;
+	height: 68px;
 	margin: -25px 0 0;
 	position: absolute;
 	top: 50%;
+	transform: translate(0, -50%);
 	z-index: 10;
 	overflow: hidden;
 	cursor: pointer;
-	color: rgba(0,0,0,0.8);
 	text-indent: -9999px;
 	-webkit-transition: all .3s ease;
 	transition: all .3s ease;
-	box-shadow: 1px 1px 10px rgba(0,0,0,0.3);
 }
-.flex-direction-nav .flex-prev { left: -70px;  background:url('../../../img/fleche-back.png') no-repeat center center; }
-.flex-direction-nav .flex-next { right: -70px; background:url('../../../img/fleche-forward.png') no-repeat center center;}
-.flexslider:hover .flex-next:hover, .flexslider:hover .flex-prev:hover { opacity: 0.7; }
+.flex-direction-nav .flex-prev { left: 50px;  background:url('../../../img/button-prev.svg') no-repeat top center; }
+.flex-direction-nav .flex-next { right: 50px; background:url('../../../img/button-next.svg') no-repeat top center; }
+.flexslider:hover .flex-next:hover, .flexslider:hover .flex-prev:hover { background-position:bottom center;  }
 .flex-direction-nav .flex-disabled { opacity: 0!important; filter:alpha(opacity=0); cursor: default; }
 
 
 /* Control Nav */
-.flex-control-nav {width: 100%; position: absolute; bottom: 10px; text-align: center;}
-.flex-control-nav li {margin: 0 8px; display: inline-block; zoom: 1; *display: inline;}
-.flex-control-paging li a {width: 11px; height: 11px; display: block; background: #666; background: rgba(0,0,0,0.5); cursor: pointer; text-indent: -9999px; border-radius: 20px; box-shadow: inset 0 0 3px rgba(0,0,0,0.3); }
-.flex-control-paging li a:hover { background: #333; background: rgba(0,0,0,0.7); }
-.flex-control-paging li a.flex-active { background: #000; background: rgba(0,0,0,0.9); cursor: default; }
+.flex-control-nav {width: 100%; position: absolute; bottom: 15px; text-align: center;}
+.flex-control-nav li {margin: 0 5px; display: inline-block; zoom: 1; *display: inline;}
+.flex-control-paging li a {
+	width: 16px;
+	height: 16px;
+	border-radius: 16px;
+	display: block;
+	background: #666;
+	background: rgba(0,0,0,0.5);
+	cursor: pointer;
+	text-indent: -9999px;
+}
 
 @media screen and (max-width: 860px) {
   .flex-direction-nav .flex-prev { opacity: 1; left: 10px;}

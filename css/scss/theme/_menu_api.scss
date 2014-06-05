@@ -1,3 +1,8 @@
+.template-api {
+	background: url('../../../img/background-page-api.jpg') repeat-y top center #F5E7CC;
+}
+
+
 .api-menu {
 	p {
 		font-size: 0.9em;
@@ -8,6 +13,7 @@
 		font-family: 'Marcelle Script';
 		font-style:   normal;
 		font-weight:  700;
+		text-transform: lowercase;
 		//font-size: 1.5em;
 		padding-bottom: 0.35em;
 		background: url('../../../img/border-bottom-ball.png') bottom left repeat-x;
@@ -59,6 +65,7 @@
 		padding: 0 0.5em;
 		display:inline-block; 
 		vertical-align: top;
+		@include mq(phone) {width:100%; }
 	}
 
 	.price-2eme-dish {
@@ -66,21 +73,25 @@
 		padding: 0 0.5em;
 		display:inline-block; 
 		vertical-align: top;
+		@include mq(phone) {width:100%; }
 	}
 
 	.price-3eme-dish {
 		width: percentage(1/6);
 		padding: 0 0.5em;
 		display:inline-block;
-		vertical-align: top; 
+		vertical-align: top;
+		@include mq(phone) {width:100%; }
 	}
 
 	.menu-colspan-2 {
 		width: percentage(2/3);
+		@include mq(phone) {width:100%; }
 	}
 
 	.menu-colspan-3 {
 		width: percentage(5/6);
+		@include mq(phone) {width:100%; }
 	}
 
 	.menu-colspan-4 {

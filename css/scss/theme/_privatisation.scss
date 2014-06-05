@@ -1,4 +1,23 @@
 //================
+
+.site-mobile-jays {
+	position:relative;
+	overflow: hidden;
+}
+
+.video-loulou {
+	//position: fixed;
+	position:absolute;
+	top:50%;
+	left:50%;
+	width:1920px;
+	height:1080px;
+	transform: translate(-50%, -50%);
+	z-index:-1000;
+	display:block;
+	background: #000;
+}
+
 //page Réservation
 .post-14  {
 	//width: 30%;
@@ -10,14 +29,16 @@
 	font-size: 0.7em;
 	background: url('../../../img/background-jays.png') no-repeat;
 	transition: 0.3s all ease-out;
-	//background: url('../../../img/background-jays.png') no-repeat center center;
-	//background-size: cover;
-
+	@include mq(phone) {width: 290px; padding: 2em 2em 0;}
 
 	h5 {
 		padding-bottom: 0.5em;
 		text-transform: uppercase;
 		border-bottom: 1px solid $red-principal;
+	}
+
+	a {
+		text-decoration: underline;
 	}
 
 	.button-jays {
@@ -29,6 +50,7 @@
 		top:35%;
 		right: -52px;
 		cursor: pointer;
+		transition: 0.3s all ease-out;
 	}
 
 	.wpcf7 {
@@ -36,9 +58,23 @@
 		input[type="submit"] {
 			top:0;
 		}
+
+		textarea {
+			height: 100px;
+		}
 	}
+}
+
+.mobile-image {
+	display:block;
+	background: url('http://www.cuyabroweb.com/loulou/wp-content/uploads/2014/05/31.jpg') no-repeat center center fixed;
+	background-size:cover
 }
 
 .hide {
 	transform: translate(-95%, 0%);
+}
+
+.rotate {
+	transform: rotate(180deg);
 }

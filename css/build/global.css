@@ -525,12 +525,6 @@ textarea {
   display: inline;
 }
 
-.page-content,
-.entry-content,
-.entry-summary {
-  margin: 1.5em 0 0;
-}
-
 .page-links {
   clear: both;
   margin: 0 0 1.5em;
@@ -1039,207 +1033,6 @@ h1, h2, h3, h5, h6 {
   margin-bottom: 1.65rem;
 }
 
-/*
-
-	Supersized - Fullscreen Slideshow jQuery Plugin
-	Version : 3.2.7
-	Site	: www.buildinternet.com/project/supersized
-	
-	Author	: Sam Dunn
-	Company : One Mighty Roar (www.onemightyroar.com)
-	License : MIT License / GPL License
-	
-*/
-body {
-  background: #111;
-  height: 100%;
-}
-
-#supersized-loader {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  z-index: 0;
-  width: 60px;
-  height: 60px;
-  margin: -30px 0 0 -30px;
-  text-indent: -999em;
-  background: url(../img/progress.gif) no-repeat center center;
-}
-
-#supersized {
-  display: block;
-  position: fixed;
-  left: 0;
-  top: 218px;
-  overflow: hidden;
-  z-index: -999;
-  height: 100%;
-  width: 100%;
-  margin: 0;
-}
-@media (max-width: 40em) {
-  #supersized {
-    left: 0;
-  }
-}
-
-#supersized img {
-  width: auto;
-  height: auto;
-  position: relative;
-  display: none;
-  outline: none;
-  border: none;
-}
-
-#supersized.speed img {
-  -ms-interpolation-mode: nearest-neighbor;
-  image-rendering: -moz-crisp-edges;
-}
-
-/*Speed*/
-#supersized.quality img {
-  -ms-interpolation-mode: bicubic;
-  image-rendering: optimizeQuality;
-}
-
-/*Quality*/
-#supersized li {
-  display: block;
-  list-style: none;
-  z-index: -30;
-  position: absolute;
-  overflow: hidden;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: #111;
-}
-
-#supersized a {
-  width: 100%;
-  height: 100%;
-  display: block;
-}
-
-#supersized li.prevslide {
-  z-index: -20;
-}
-
-#supersized li.activeslide {
-  z-index: -10;
-}
-
-#supersized li.image-loading {
-  background: #111111 url(../../../img/progress.gif) no-repeat center center;
-  width: 100%;
-  height: 100%;
-}
-
-#supersized li.image-loading img {
-  visibility: hidden;
-}
-
-#supersized li.prevslide img, #supersized li.activeslide img {
-  display: inline;
-}
-
-/*
-
-	Supersized - Fullscreen Slideshow jQuery Plugin
-	Version : 3.2.7
-	Site	: www.buildinternet.com/project/supersized
-	
-	Theme 	: Shutter 1.2
-	Author	: Sam Dunn
-	Company : One Mighty Roar (www.onemightyroar.com)
-	License : MIT License / GPL License
-	
-*/
-/* Controls Bar
-----------------------------*/
-#controls-wrapper {
-  margin: 0 auto;
-  height: 50px;
-  width: 100%;
-  bottom: 0px;
-  left: 0;
-  z-index: 4;
-  position: fixed;
-  padding-left: 230px;
-}
-@media (max-width: 40em) {
-  #controls-wrapper {
-    padding-left: 0;
-    height: auto;
-  }
-}
-
-#controls {
-  overflow: hidden;
-  height: 100%;
-  position: relative;
-  text-align: left;
-  z-index: 5;
-}
-
-#prevslide, #nextslide {
-  position: absolute;
-  height: 96px;
-  width: 100px;
-  top: 50%;
-  margin-top: -50px;
-  transition: 0.3s all ease-out;
-}
-
-#prevslide {
-  left: 40px;
-  background: url("../../../img/button-prev.svg") no-repeat top center;
-}
-
-#nextslide {
-  right: 40px;
-  background: url("../../../img/button-next.svg") no-repeat top center;
-}
-
-#prevslide:active, #nextslide:active {
-  margin-top: -19px;
-}
-
-#prevslide:hover, #nextslide:hover {
-  cursor: pointer;
-  background-position: bottom center;
-}
-
-ul#slide-list {
-  padding: 19px 0;
-  /*float:left; position:absolute; left:70%;*/
-  float: right;
-  margin-right: 8%;
-  width: 220px;
-}
-
-ul#slide-list li {
-  list-style: none;
-  float: left;
-  margin: 0 5px 0 0;
-}
-
-ul#slide-list li a {
-  display: block;
-  width: 15px;
-  height: 15px;
-  border-radius: 15px;
-  border: 1px solid #000;
-  transition: 0.3s all ease-out;
-}
-
-ul#slide-list li a:hover {
-  cursor: pointer;
-}
-
 /*! fancyBox v2.1.5 fancyapps.com | fancyapps.com/fancybox/#license */
 .fancybox-wrap,
 .fancybox-skin,
@@ -1346,7 +1139,7 @@ ul#slide-list li a:hover {
   height: 36px;
   cursor: pointer;
   z-index: 8040;
-  background: url("../../../img/fancy/bt-close-fancy.jpg") center center no-repeat;
+  background: url("../../../img/fancy/bt-close-fancy.svg") center center no-repeat;
 }
 
 .fancybox-nav {
@@ -1543,206 +1336,208 @@ ul#slide-list li a:hover {
   transition-duration: 0.6s;
 }
 
-/**
- * fullPage 1.6.7
- * https://github.com/alvarotrigo/fullPage.js
- * MIT licensed
+.vjs-control-bar {
+  display: none;
+}
+
+/*
+ * jQuery FlexSlider v2.2.0
+ * http://www.woothemes.com/flexslider/
  *
- * Copyright (C) 2013 alvarotrigo.com - A project by Alvaro Trigo
+ * Copyright 2012 WooThemes
+ * Free to use under the GPLv2 license.
+ * http://www.gnu.org/licenses/gpl-2.0.html
+ *
+ * Contributing author: Tyler Smith (@mbmufffin)
  */
-html, body {
+/* Loading
+***********************/
+.loading {
+  height: 20em;
+  width: 100%;
+  position: relative;
+}
+
+.loading .flexslider {
+  opacity: 0;
+}
+
+/* Browser Resets
+*********************************/
+.flex-container a:active,
+.flexslider a:active,
+.flex-container a:focus,
+.flexslider a:focus {
+  outline: none;
+}
+
+.slides,
+.flex-control-nav,
+.flex-direction-nav {
   margin: 0;
   padding: 0;
-  overflow: hidden;
-  -webkit-tap-highlight-color: transparent;
+  list-style: none;
 }
 
-#superContainer {
-  height: 100%;
+/* FlexSlider Necessary Styles
+*********************************/
+.flexslider {
+  margin: 0;
+  padding: 0;
+}
+
+.flexslider .slides > li {
+  display: none;
+  -webkit-backface-visibility: hidden;
   position: relative;
-  /* Touch detection for Windows 8 */
-  -ms-touch-action: none;
 }
 
-.section {
-  position: relative;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-}
-
-.slide {
-  float: left;
-}
-
-.slide, .slidesContainer {
-  height: 100%;
+/* Hide the slides before the JS is loaded. Avoids image jumping */
+.flexslider .slides img {
+  width: 100%;
   display: block;
 }
 
-.slides {
-  height: 100%;
-  overflow: hidden;
-  position: relative;
-  -webkit-transition: all 0.3s ease-out;
-  -moz-transition: all 0.3s ease-out;
-  -o-transition: all 0.3s ease-out;
-  transition: all 0.3s ease-out;
+.flex-pauseplay span {
+  text-transform: capitalize;
 }
 
-.section.table, .slide.table {
-  display: table;
-  width: 100%;
-}
-
-.tableCell {
-  display: table-cell;
-  vertical-align: middle;
-  width: 100%;
-  height: 100%;
-}
-
-.slidesContainer {
-  float: left;
-  position: relative;
-}
-
-.controlArrow {
-  position: absolute;
-  top: 50%;
-  cursor: pointer;
-  width: 0;
+/* Clearfix for the .slides element */
+.slides:after {
+  content: "\0020";
+  display: block;
+  clear: both;
+  visibility: hidden;
+  line-height: 0;
   height: 0;
-  border-style: solid;
-  margin-top: -38px;
 }
 
-.controlArrow.prev {
-  left: 15px;
-  width: 0;
-  border-width: 38.5px 34px 38.5px 0;
-  border-color: transparent #fff transparent transparent;
-}
-
-.controlArrow.next {
-  right: 15px;
-  border-width: 38.5px 0 38.5px 34px;
-  border-color: transparent transparent transparent #fff;
-}
-
-.scrollable {
-  overflow: scroll;
-}
-
-.easing {
-  -webkit-transition: all 0.7s ease-out;
-  -moz-transition: all 0.7s ease-out;
-  -o-transition: all 0.7s ease-out;
-  transition: all 0.7s ease-out;
-}
-
-#fullPage-nav {
-  position: fixed;
-  z-index: 100;
-  margin-top: -32px;
-  top: 50%;
-  opacity: 1;
-}
-
-#fullPage-nav.right {
-  right: 17px;
-}
-
-#fullPage-nav.left {
-  left: 17px;
-}
-
-.fullPage-slidesNav {
-  position: absolute;
-  z-index: 4;
-  left: 50%;
-  opacity: 1;
-}
-
-.fullPage-slidesNav.bottom {
-  bottom: 17px;
-}
-
-.fullPage-slidesNav.top {
-  top: 17px;
-}
-
-#fullPage-nav ul,
-.fullPage-slidesNav ul {
-  margin: 0;
-  padding: 0;
-}
-
-#fullPage-nav li,
-.fullPage-slidesNav li {
+html[xmlns] .slides {
   display: block;
-  width: 14px;
-  height: 13px;
-  margin: 7px;
-  position: relative;
 }
 
-.fullPage-slidesNav li {
-  display: inline-block;
+* html .slides {
+  height: 1%;
 }
 
-#fullPage-nav li a,
-.fullPage-slidesNav li a {
+/* No JavaScript Fallback */
+/* If you are not using another script, such as Modernizr, make sure you
+ * include js that eliminates this class on page load */
+.no-js .slides > li:first-child {
   display: block;
+}
+
+/* FlexSlider Default Theme
+*********************************/
+.flexslider {
+  margin: 0 0 0;
+  padding: 0 0 0;
   position: relative;
-  z-index: 1;
-  width: 100%;
-  height: 100%;
-  cursor: pointer;
+  zoom: 1;
+}
+
+.flex-viewport {
+  max-height: 2000px;
+  -webkit-transition: all 1s ease;
+  -moz-transition: all 1s ease;
+  -o-transition: all 1s ease;
+  transition: all 1s ease;
+}
+
+.loading .flex-viewport {
+  max-height: 300px;
+}
+
+.flexslider .slides {
+  zoom: 1;
+}
+
+.carousel li {
+  margin-right: 5px;
+}
+
+/* Direction Nav */
+.flex-direction-nav {
+  *height: 0;
+}
+
+.flex-direction-nav a {
   text-decoration: none;
-}
-
-#fullPage-nav li .active span,
-.fullPage-slidesNav .active span {
-  background: #333;
-}
-
-#fullPage-nav span,
-.fullPage-slidesNav span {
-  top: 2px;
-  left: 2px;
-  width: 8px;
-  height: 8px;
-  border: 1px solid #000;
-  background: transparent;
-  -webkit-border-radius: 50%;
-  -moz-border-radius: 50%;
-  border-radius: 50%;
+  display: block;
+  width: 70px;
+  height: 68px;
+  margin: -25px 0 0;
   position: absolute;
-  z-index: 1;
+  top: 50%;
+  transform: translate(0, -50%);
+  z-index: 10;
+  overflow: hidden;
+  cursor: pointer;
+  text-indent: -9999px;
+  -webkit-transition: all .3s ease;
+  transition: all .3s ease;
 }
 
-.fullPage-tooltip {
-  position: absolute;
-  color: #fff;
-  font-size: 14px;
-  font-family: arial, helvetica, sans-serif;
-  top: -2px;
+.flex-direction-nav .flex-prev {
+  left: 50px;
+  background: url("../../../img/button-prev.svg") no-repeat top center;
 }
 
-.fullPage-tooltip.right {
-  right: 20px;
+.flex-direction-nav .flex-next {
+  right: 50px;
+  background: url("../../../img/button-next.svg") no-repeat top center;
 }
 
-.fullPage-tooltip.left {
-  left: 20px;
+.flexslider:hover .flex-next:hover, .flexslider:hover .flex-prev:hover {
+  background-position: bottom center;
 }
 
-.site-header {
-  background: url("../../../img/background-header.jpg") no-repeat white;
+.flex-direction-nav .flex-disabled {
+  opacity: 0 !important;
+  filter: alpha(opacity=0);
+  cursor: default;
+}
+
+/* Control Nav */
+.flex-control-nav {
   width: 100%;
-  position: fixed;
-  z-index: 9;
+  position: absolute;
+  bottom: 15px;
+  text-align: center;
+}
+
+.flex-control-nav li {
+  margin: 0 5px;
+  display: inline-block;
+  zoom: 1;
+  *display: inline;
+}
+
+.flex-control-paging li a {
+  width: 16px;
+  height: 16px;
+  border-radius: 16px;
+  display: block;
+  background: #666;
+  background: rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+  text-indent: -9999px;
+}
+
+@media screen and (max-width: 860px) {
+  .flex-direction-nav .flex-prev {
+    opacity: 1;
+    left: 10px;
+  }
+
+  .flex-direction-nav .flex-next {
+    opacity: 1;
+    right: 10px;
+  }
+}
+.site-header {
+  background: url("../../../img/background-header.jpg") repeat-x white;
+  width: 100%;
 }
 
 .side-header-top {
@@ -1781,27 +1576,27 @@ html, body {
 }
 .site-branding .site-title {
   display: inline-block;
-  width: 40%;
+  width: 35%;
   vertical-align: top;
-  margin-top: 0.5em;
+  margin-top: 0.2em;
 }
 @media only screen and (min-width: 40em) and (max-width: 63em) {
   .site-branding .site-title {
     width: 100%;
-    margin-top: 0;
+    margin: 0 0 0;
   }
 }
 @media (max-width: 40em) {
   .site-branding .site-title {
     width: 100%;
-    margin-top: 0;
+    margin: 0.15em 0 0;
   }
 }
 .site-branding .site-title a {
-  background: url("../../../img/logo-loulou.svg");
+  background: url("../../../img/logo-loulou.svg") no-repeat center center;
   display: block;
-  height: 100px;
-  width: 310px;
+  height: 90px;
+  width: 279px;
   text-indent: -9999px;
 }
 @media only screen and (min-width: 40em) and (max-width: 63em) {
@@ -1819,28 +1614,31 @@ html, body {
 }
 .site-branding .site-description {
   display: inline-block;
-  width: 60%;
+  width: 65%;
   vertical-align: top;
   font-family: 'Mohave';
   font-style: normal;
-  font-weight: 700;
-  font-size: 2em;
+  font-weight: 400;
+  font-size: 1.7em;
   text-transform: uppercase;
   color: #fff;
-  margin-top: 1.75em;
+  margin-top: 1.4em;
+  padding-left: 0.8em;
+  letter-spacing: 2.5px;
 }
 @media only screen and (min-width: 63em) and (max-width: 85em) {
   .site-branding .site-description {
     font-size: 1.5em;
-    margin-top: 2.5em;
-    padding-left: 1em;
+    margin-top: 1.5em;
+    padding-left: 1.5em;
+    letter-spacing: 1px;
   }
 }
 @media only screen and (min-width: 40em) and (max-width: 63em) {
   .site-branding .site-description {
     width: 100%;
-    margin-top: 0.5em;
-    font-size: 1em;
+    margin: 0.2em 0 0;
+    font-size: 0.8em;
     text-align: center;
   }
 }
@@ -1873,19 +1671,19 @@ html, body {
   clear: both;
   display: block;
   width: 100%;
-  margin-top: 0.8em;
+  margin-top: 0.4em;
   text-align: center;
 }
 @media only screen and (min-width: 40em) and (max-width: 63em) {
   .main-navigation {
     width: 80%;
-    margin: 0.8em auto 0;
+    margin: 0.2em auto 0;
   }
 }
 @media (max-width: 40em) {
   .main-navigation {
     width: 95%;
-    margin: 0.8em auto 0;
+    margin: 0.2em auto 0;
   }
 }
 
@@ -1898,8 +1696,7 @@ html, body {
 .main-navigation .menu > li {
   display: inline-block;
   position: relative;
-  padding-left: 1.75em;
-  padding-bottom: 0.5em;
+  padding-left: 2em;
   position: relative;
   transition: 0.2s all ease-in;
 }
@@ -1943,7 +1740,7 @@ html, body {
   content: "\2022";
   position: absolute;
   top: .25em;
-  left: 0.75em;
+  left: 0.6em;
 }
 @media only screen and (min-width: 40em) and (max-width: 63em) {
   .main-navigation .menu > li::before {
@@ -1970,7 +1767,7 @@ html, body {
   font-family: 'Mohave';
   font-style: normal;
   font-weight: 700;
-  font-size: 1.5em;
+  font-size: 1.3em;
   text-transform: uppercase;
   text-align: left;
   transition: 0.2s all ease-in;
@@ -1998,7 +1795,7 @@ html, body {
   float: left;
   left: 0.75em;
   position: absolute;
-  top: 3em;
+  top: 2.2em;
   z-index: 99999;
 }
 @media only screen and (min-width: 40em) and (max-width: 63em) {
@@ -2080,21 +1877,21 @@ html, body {
   display: block;
 }
 
-.main-navigation .current_page_item a,
-.main-navigation .current-menu-item a,
+.main-navigation .current_page_item > a,
+.main-navigation .current-menu-item > a,
 .main-navigation .current-menu-ancestor > a {
   color: #dd0b14;
 }
 @media only screen and (min-width: 40em) and (max-width: 63em) {
-  .main-navigation .current_page_item a,
-  .main-navigation .current-menu-item a,
+  .main-navigation .current_page_item > a,
+  .main-navigation .current-menu-item > a,
   .main-navigation .current-menu-ancestor > a {
     color: #332c58;
   }
 }
 @media (max-width: 40em) {
-  .main-navigation .current_page_item a,
-  .main-navigation .current-menu-item a,
+  .main-navigation .current_page_item > a,
+  .main-navigation .current-menu-item > a,
   .main-navigation .current-menu-ancestor > a {
     color: #332c58;
   }
@@ -2114,12 +1911,13 @@ html, body {
 
   .menu-toggle {
     text-align: center;
-    font-size: 2em;
+    font-size: 1.75em;
     display: inline-block;
-    padding: 0.2em;
-    background: #332c58;
     color: #fff;
     border-radius: 5px;
+    padding: .2em .5em .2em 1.8em;
+    margin-bottom: 0.2em;
+    background: url("../../../img/icon-menu.svg") no-repeat 0.5em center #332c58;
   }
 
   .main-navigation ul {
@@ -2130,42 +1928,46 @@ html, body {
 5.1 Menus socail et langues, Newsletter
 --------------------------------------------------------------*/
 .nav-social {
-  margin-top: 0.5em;
+  margin-top: 1.5em;
 }
 @media (max-width: 40em) {
   .nav-social {
-    margin-top: 0;
+    margin: 0.5em auto;
+    width: 180px;
+    display: block;
   }
 }
 
 .bt-newsletter {
-  display: block;
-  width: 100%;
-  text-align: center;
+  display: inline-block;
+  width: 50%;
+  vertical-align: top;
 }
 @media (max-width: 40em) {
   .bt-newsletter {
-    width: 50%;
-    display: inline-block;
-    vertical-align: top;
-    text-align: right;
-    padding-right: 0.5em;
+    width: auto;
   }
 }
 .bt-newsletter a {
   background: url("../../../img/icon-newstletter.svg") no-repeat center top;
+  color: #fff;
   display: block;
-  padding-top: 2em;
+  width: 75px;
+  float: right;
+  padding-top: 1.7em;
+  margin-right: 0.25em;
   position: relative;
   font-family: 'Mohave';
   font-weight: normal;
+  font-size: 0.9em;
   text-transform: uppercase;
-  color: #fff;
   transition: 0.2s all ease-in;
 }
 @media (max-width: 40em) {
   .bt-newsletter a {
-    background-position: right top;
+    padding-top: 0;
+    text-indent: -9999px;
+    width: 50px;
   }
 }
 .bt-newsletter a:hover {
@@ -2173,41 +1975,48 @@ html, body {
 }
 
 .menu-social {
-  display: block;
-  width: 100%;
+  display: inline-block;
+  width: 50%;
+  vertical-align: top;
   margin-bottom: 0.5em;
 }
 @media (max-width: 40em) {
   .menu-social {
-    width: 50%;
-    display: inline-block;
-    vertical-align: top;
     margin-top: 0;
     text-align: left;
+    width: auto;
   }
 }
 .menu-social ul {
   margin: 0;
-  width: 65px;
-  margin: 0 auto;
+  width: 56px;
+  margin: 0 0 0 0.25em;
+  text-align: left;
   list-style: none;
 }
 @media (max-width: 40em) {
   .menu-social ul {
-    margin: 0 0 0 0.5em;
+    margin: 0 0 0 0em;
+    width: auto;
   }
 }
 .menu-social li {
   float: left;
   width: 50%;
-  margin-bottom: 0.25em;
+  margin-bottom: 0.2em;
+}
+@media (max-width: 40em) {
+  .menu-social li {
+    width: 25%;
+    margin-bottom: 0;
+  }
 }
 .menu-social a {
   text-indent: -9999px;
   float: left;
   display: block;
-  height: 30px;
-  width: 30px;
+  height: 25px;
+  width: 25px;
   margin-left: 0.3em;
   transition: 0.2s all ease-in;
 }
@@ -2244,7 +2053,9 @@ html, body {
   background-image: url("../../../img/icon-trip-advisor.png");
 }
 
-.site-content {
+.site-content, .content-area {
+  width: 100%;
+  height: 100%;
   position: relative;
 }
 
@@ -2254,15 +2065,14 @@ html, body {
   left: 0;
   right: 0;
   height: 15px;
+  z-index: 10;
   background: url("../../../img/background-content-onglet.png") top center;
 }
 
 .template-general {
-  margin-top: 218px;
   width: 100%;
   padding: 2em 20%;
-  background: url("../../../img/bg-home.jpg") no-repeat center center;
-  background-size: cover;
+  background: url("../../../img/background-page-home.jpg") repeat-y top center #f5e7cc;
 }
 @media only screen and (min-width: 63em) and (max-width: 85em) {
   .template-general {
@@ -2305,6 +2115,8 @@ html, body {
   font-weight: 700;
   text-align: center;
   background: #fff;
+  max-width: 240px;
+  margin: 0 auto;
 }
 .template-general .entry-title::before {
   content: "";
@@ -2358,6 +2170,25 @@ html, body {
 .post-10 p {
   text-align: center;
 }
+.post-10 h2 {
+  color: #332c58;
+  font-family: 'Mohave';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 1.35em;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.post-269 h2 {
+  color: #332c58;
+  font-family: 'Mohave';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 1.35em;
+  margin-bottom: 0.2em;
+  text-transform: uppercase;
+}
 
 .post-27 h2 {
   color: #332c58;
@@ -2367,23 +2198,78 @@ html, body {
   font-size: 1.35em;
   text-transform: uppercase;
   text-align: center;
+  margin-bottom: 2em;
 }
 .post-27 p {
   text-align: center;
 }
-.post-27 p:nth-child(3) {
-  margin-top: 2em;
+
+.spinner {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  text-align: center;
 }
 
+.spinner > div {
+  width: 18px;
+  height: 18px;
+  background-color: #dd0b14;
+  border-radius: 100%;
+  display: inline-block;
+  -webkit-animation: bouncedelay 1.4s infinite ease-in-out;
+  animation: bouncedelay 1.4s infinite ease-in-out;
+  /* Prevent first frame from flickering when animation starts */
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+.spinner .bounce1 {
+  -webkit-animation-delay: -0.32s;
+  animation-delay: -0.32s;
+}
+
+.spinner .bounce2 {
+  -webkit-animation-delay: -0.16s;
+  animation-delay: -0.16s;
+}
+
+@-webkit-keyframes bouncedelay {
+  0%, 80%, 100% {
+    -webkit-transform: scale(0);
+  }
+
+  40% {
+    -webkit-transform: scale(1);
+  }
+}
+@keyframes bouncedelay {
+  0%, 80%, 100% {
+    transform: scale(0);
+    -webkit-transform: scale(0);
+  }
+
+  40% {
+    transform: scale(1);
+    -webkit-transform: scale(1);
+  }
+}
 .template-photos {
-  margin: 218px 0 0 0;
-  height: 100%;
-  position: relative;
+  width: 100%;
 }
 
+.bloc-visite {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+}
 .bloc-visite p {
   margin: 0;
   height: 100%;
+}
+
+.template-contact {
+  background: url("../../../img/background-page-contact.jpg") repeat-y top center #f5e7cc;
 }
 
 .contact h3 {
@@ -2455,7 +2341,8 @@ html, body {
   margin: 0 auto;
   display: block;
   background: url("../../../img/button-send.svg") no-repeat;
-  height: 58px;
+  height: 50px;
+  width: 130px;
   padding: 0 1em;
   border: none;
   font-family: 'Mohave';
@@ -2520,6 +2407,10 @@ html, body {
   text-align: center;
 }
 
+.template-api {
+  background: url("../../../img/background-page-api.jpg") repeat-y top center #f5e7cc;
+}
+
 .api-menu p {
   font-size: 0.9em;
   line-height: 1.4em;
@@ -2528,6 +2419,7 @@ html, body {
   font-family: 'Marcelle Script';
   font-style: normal;
   font-weight: 700;
+  text-transform: lowercase;
   padding-bottom: 0.35em;
   background: url("../../../img/border-bottom-ball.png") bottom left repeat-x;
 }
@@ -2564,11 +2456,21 @@ html, body {
   display: inline-block;
   vertical-align: top;
 }
+@media (max-width: 40em) {
+  .api-menu .price-dish {
+    width: 100%;
+  }
+}
 .api-menu .price-2eme-dish {
   width: 16.66667%;
   padding: 0 0.5em;
   display: inline-block;
   vertical-align: top;
+}
+@media (max-width: 40em) {
+  .api-menu .price-2eme-dish {
+    width: 100%;
+  }
 }
 .api-menu .price-3eme-dish {
   width: 16.66667%;
@@ -2576,26 +2478,34 @@ html, body {
   display: inline-block;
   vertical-align: top;
 }
+@media (max-width: 40em) {
+  .api-menu .price-3eme-dish {
+    width: 100%;
+  }
+}
 .api-menu .menu-colspan-2 {
   width: 66.66667%;
 }
+@media (max-width: 40em) {
+  .api-menu .menu-colspan-2 {
+    width: 100%;
+  }
+}
 .api-menu .menu-colspan-3 {
   width: 83.33333%;
+}
+@media (max-width: 40em) {
+  .api-menu .menu-colspan-3 {
+    width: 100%;
+  }
 }
 
 .grid {
   margin-left: -2em;
 }
 
-@media only screen and (min-width: 40em) and (max-width: 63em) {
-  .module-presse {
-    margin-top: 1em;
-  }
-}
-@media (max-width: 40em) {
-  .module-presse {
-    margin-top: 1em;
-  }
+.module-presse {
+  margin-top: 1em;
 }
 .module-presse img {
   max-width: 100%;
@@ -2637,6 +2547,23 @@ html, body {
   border-left: 5px solid #000;
 }
 
+.site-mobile-jays {
+  position: relative;
+  overflow: hidden;
+}
+
+.video-loulou {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 1920px;
+  height: 1080px;
+  transform: translate(-50%, -50%);
+  z-index: -1000;
+  display: block;
+  background: #000;
+}
+
 .post-14 {
   position: relative;
   margin-top: 2em;
@@ -2647,10 +2574,19 @@ html, body {
   background: url("../../../img/background-jays.png") no-repeat;
   transition: 0.3s all ease-out;
 }
+@media (max-width: 40em) {
+  .post-14 {
+    width: 290px;
+    padding: 2em 2em 0;
+  }
+}
 .post-14 h5 {
   padding-bottom: 0.5em;
   text-transform: uppercase;
   border-bottom: 1px solid #dd0b14;
+}
+.post-14 a {
+  text-decoration: underline;
 }
 .post-14 .button-jays {
   position: absolute;
@@ -2661,13 +2597,27 @@ html, body {
   top: 35%;
   right: -52px;
   cursor: pointer;
+  transition: 0.3s all ease-out;
 }
 .post-14 .wpcf7 input[type="submit"] {
   top: 0;
 }
+.post-14 .wpcf7 textarea {
+  height: 100px;
+}
+
+.mobile-image {
+  display: block;
+  background: url("http://www.cuyabroweb.com/loulou/wp-content/uploads/2014/05/31.jpg") no-repeat center center fixed;
+  background-size: cover;
+}
 
 .hide {
   transform: translate(-95%, 0%);
+}
+
+.rotate {
+  transform: rotate(180deg);
 }
 
 .module-newsletter {
@@ -2721,12 +2671,27 @@ html, body {
   font-size: 1em;
   text-transform: uppercase;
   color: #fff;
-  padding: .4em 1em .3em 2.5em;
+  padding: .4em 1em .3em 3em;
   border: none;
   transition: 0.2s background ease-in;
 }
 .module-newsletter input[type="submit"]:hover {
   opacity: 0.8;
+}
+
+.site-footer {
+  background: url("../../../img/background-header.jpg") repeat-x white;
+  width: 100%;
+}
+.site-footer p {
+  text-align: center;
+  color: #fff;
+  font-size: 0.75em;
+  margin: 0;
+  padding: 0.2em;
+}
+.site-footer a {
+  text-decoration: underline;
 }
 
 *,
@@ -2747,14 +2712,16 @@ body {
   -ms-hyphens: auto;
   -o-hyphens: auto;
   hyphens: auto;
+  background: #fff;
   color: #332c58;
 }
 
-/* ========= Helperclass =========== */
 a {
+  color: #fff;
   text-decoration: none;
 }
 
+/* ========= Helperclass =========== */
 .clearfix:before,
 .clearfix:after {
   content: " ";
