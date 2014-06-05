@@ -1,29 +1,42 @@
 <?php
 
-error_reporting(E_ALL);
-//error_reporting(0);
+//error_reporting(E_ALL);
+error_reporting(0);
 
 
 $postId = get_the_ID();
 
 switch ($postId) {
-	case '4': //Menu
+	case '4': //Menu FR
 		$idCarte = '324962';
 		break;
-	case '6': //Take Away EN
+	case '191': //Carte FR
+		$idCarte = '381917';
+		break;
+	case '193': //Petit Dej & Brunch FR
+		$idCarte = '381918';
+		break;
+	case '195': //Cafe FR
+		$idCarte = '381919';
+		break;
+	case '197': //Boissons FR
+		$idCarte = '381920';
+		break;
+	//menu take away
+	case '6': //Take Away
 		$idCarte = '327342';
 		break;
-	case '93': //Menu
-		$idCarte = '324962';
+	case '235': //Menu Take Away
+		$idCarte = '381921';
 		break;
-	case '203': //Take Away EN
-		$idCarte = '327342';
-		break;	
+	case '203': //Café Take away
+		$idCarte = '381922';
+		break;
 	//case '95': // boisson ??????
 	//	$idCarte = '350822';
 	//	break;
 	default:
-		$idCarte = '350812';
+		$idCarte = '324962';
 		break;
 }
 

@@ -5,7 +5,7 @@ Template Name: Template Menu
 
 get_header(); ?>
 
-	<div id="primary" class="content-area template-general">
+	<div id="primary" class="content-area template-general template-api">
 		<main id="main" class="site-main api-menu" role="main">
 
 			<?php while ( have_posts() ) : the_post(); ?>
