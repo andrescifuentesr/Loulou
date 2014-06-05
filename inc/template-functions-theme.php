@@ -16,8 +16,9 @@ function social_register_nav_menus() {
 	register_nav_menu( 'social', __( 'Social', 'loulou' ) );
 }
 
-//Shorcode
-
+//-------------------------------------------------  
+//function shortcode
+//-------------------------------------------------
 function google_maps_shortcode( $atts ) {
 	return '
 		<div class="map-wrapper">
@@ -25,3 +26,11 @@ function google_maps_shortcode( $atts ) {
 		</div>';
 }
 add_shortcode( 'google_maps', 'google_maps_shortcode' );
+
+
+//-------------------------------------------------  
+//function custome Image
+//-------------------------------------------------
+if ( function_exists( 'add_image_size' ) ) {
+    add_image_size( 'imgPresse', 250, 350, false );
+}

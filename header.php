@@ -15,6 +15,13 @@
 <link rel="profile" href="http://gmpg.org/xfn/11">
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
 
+<!-- Favicon -->
+<link rel="icon" type="image/png" href="<?php bloginfo('template_directory'); ?>/img/favicon-196x196.png" sizes="196x196">
+<link rel="icon" type="image/png" href="<?php bloginfo('template_directory'); ?>/img/favicon-160x160.png" sizes="160x160">
+<link rel="icon" type="image/png" href="<?php bloginfo('template_directory'); ?>/img/favicon-96x96.png" sizes="96x96">
+<link rel="icon" type="image/png" href="<?php bloginfo('template_directory'); ?>/img/favicon-16x16.png" sizes="16x16">
+<link rel="icon" type="image/png" href="<?php bloginfo('template_directory'); ?>/img/favicon-32x32.png" sizes="32x32">
+
 <?php wp_head(); ?>
 </head>
 
@@ -38,7 +45,7 @@
 		</div>
 
 		<nav id="site-navigation" class="main-navigation" role="navigation">
-			<h1 class="menu-toggle"><?php _e( '&#9776; Menu', 'loulou' ); ?></h1>
+			<h1 class="menu-toggle"><?php _e( 'Menu', 'loulou' ); ?></h1>
 			<a class="skip-link screen-reader-text" href="#content"><?php _e( 'Skip to content', 'loulou' ); ?></a>
 
 			<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>

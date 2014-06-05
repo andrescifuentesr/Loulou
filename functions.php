@@ -95,25 +95,13 @@ function loulou_scripts() {
 	wp_enqueue_script( 'loulou-modernizr', get_template_directory_uri() . '/js/libs/modernizr.custom.63353.js', array(), '20140515', false );
 
 	// Enqueue Google maps
-	//if ( is_page( 16 ) ) {
+	if ( is_page( 16 ) ) {
 		wp_enqueue_script( 'sprit-GoogleMaps', 'https://maps.googleapis.com/maps/api/js?key=AIzaSyArEmbqneDepMsMr0aZAYE-XAVxRsl2B9E&sensor=false', false );
-	//}
+	}
 	
 	//Production JS
 	wp_enqueue_script( 'loulou-main', get_template_directory_uri() . '/js/build/production.min.js', array('jquery'), '20140506', true );
-
-	//photo JS
-	//if ( is_page( 8 ) ) {
-		wp_enqueue_script( 'loulou-photo', get_template_directory_uri() . '/js/build/production-photo.min.js', array('jquery'), '20140506', false );
-	//}
-
-	//video JS
-	//if ( is_page( 14 ) ) {
-		wp_enqueue_script( 'loulou-video', get_template_directory_uri() . '/js/build/production-video.min.js', array('jquery'), '20140506', false );
-	//}
-
-	wp_enqueue_script( 'loulou-fullpage', get_template_directory_uri() . '/js/libs/jquery.fullPage.min.js', array(), '20140515', true );
-	wp_enqueue_script( 'loulou-scroll', get_template_directory_uri() . '/js/libs/jquery.slimscroll.min.js', array(), '20140515', true );
+	
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );

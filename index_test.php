@@ -21,7 +21,7 @@ get_header(); ?>
 					<?php /* Start the Loop */ ?>
 						<?php
 						$args = array(
-						'page_id'			=> 16,
+						'page_id'			=> 27,
 						'order'			=> 'DESC',			// List in ascending order
 						'showposts'		=> 1, 				// Show all attachments
 						);

@@ -1,14 +1,20 @@
 //========================
-// Full page system
+//  Flexslider
 //========================
-jQuery(document).ready(function($) {
-	$('#fullpage').fullpage({
-		'verticalCentered': false,
-		'resize' : false,
-		'scrollOverflow': true
+jQuery(window).load(function(){
+	jQuery(".flexslider").flexslider({
+		animation:"slide",
+		controlNav: false, 
+		start:function(){
+			jQuery(".site-main").find(".flexslider-wrapper").removeClass("loading");
+			jQuery(".spinner").hide();
+		}
 	});
 });
 
+//========================
+// fancybox Newsletter
+//========================
 jQuery(function($) {
 	$(".button-news-fancy").fancybox(
 	{
@@ -27,24 +33,29 @@ jQuery(function($) {
 	});
 });
 
+
 //========================
-// BigVideo.js
+// Video
 //========================
+var videoLoulou = document.getElementById("video-loulou");
+videoLoulou.play();
 
 jQuery(function($) {
-	var BV = new $.BigVideo();
-	BV.init();
 	if (Modernizr.touch) {
-		BV.show('img/background-dock.jpg');
-	} else {
-		BV.show('http://www.asiances-media.com/wp-content/themes/asiances_media/video/asiances-media_intro.mp4',{doLoop:true, altSource:'http://www.asiances-media.com/wp-content/themes/asiances_media/video/asiances-media_intro.ogg'});
+		$(".video-loulou").hide();
+		$(".site-mobile-jays").addClass("mobile-image");
+	// } else {
+		
 	}
+});
 
+jQuery(function($) {
 	//button show/hide
 	$('.button-jays').on('click', function (){
 		$('.jays-block').toggleClass('hide');
+		$(this).toggleClass('rotate');
 	});
-});
+});	
 
 //========================
 // We call Google Maps function	
@@ -142,7 +153,7 @@ jQuery(function($) {
 		map:map,
 		//icon: 'http://l-a-p.co/l-a-p/wp-content/themes/lap/img/icon.png',
 		//icon: image,
-		title: 'loulou du 12eme',
+		title: 'loulou',
 		position: loulou,
 	});
 
