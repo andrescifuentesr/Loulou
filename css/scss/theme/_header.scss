@@ -61,14 +61,6 @@
 	}
 }
 
-.nav-social {
-	display: inline-block;
-	width: 25%;
-	vertical-align: top;
-	@include mq(lap) { width: 20%;}
-	@include mq(phone) {width: 100%; }
-}
-
 
 /*--------------------------------------------------------------
 5.2 Menus

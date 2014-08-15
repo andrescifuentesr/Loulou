@@ -20,12 +20,12 @@
 
 .template-general {
 	width:100%;
-	padding: 2em 20%;
-	background: url('../../../img/background-page-home.jpg') repeat-y top center #F5E7CC;
+	padding: 2em 20% 4em;
+	background: url('../../../img/background-page-home.jpg') repeat-y top center #F5EAD4;
 	//background-size: cover;
-	@include mq(lap) {padding: 2em 15%;}
-	@include mq(tablet) {padding: 2em 5%;}
-	@include mq(phone) {padding: 2em 1.5%;}
+	@include mq(lap) {padding: 2em 15% 4em;}
+	@include mq(tablet) {padding: 2em 5% 4em;}
+	@include mq(phone) {padding: 2em 1.5% 4em;}
 	
 	.site-main {
 		background: #fff;
@@ -79,7 +79,7 @@
 }
 
 //mmmmmmmmmmmmmmm Reservation
-.post-10 {
+.post-10, .post-338 {
 
 	p {
 		text-align: center;

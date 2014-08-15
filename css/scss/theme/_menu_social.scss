@@ -2,9 +2,11 @@
 5.1 Menus socail et langues, Newsletter
 --------------------------------------------------------------*/
 .nav-social {
-	//width: 280px;
-	//float: right;
+	display: inline-block;
+	width: 25%;
+	vertical-align: top;
 	margin-top: 1.5em;
+	@include mq(lap) { width: 20%;}
 	@include mq(phone) {margin: 0.5em auto; width:180px; display:block;}
 }
 
@@ -43,16 +45,43 @@
 	}
 }
 
-.menu-social{
+
+.menu-lang {
+	position: absolute;
+	left: .5em;
+	top: 5.5em;
+	@include mq(tablet) { top: 6em;}
+	@include mq(phone) { top: 3em; right: -60%; left: auto}
+
+	#lang_sel_list a, #lang_sel_list a:visited {
+		background: transparent;
+	}
+}
+
+
+.wrapper-menu-social {
 	display:inline-block;
 	width: 50%;
 	vertical-align:top;
 	margin-bottom: 0.5em;
+	position: relative;
 	@include mq(phone) {
 		margin-top: 0;
 		text-align:left;
 		width: auto;
 	}
+}
+
+.menu-social {
+	// display:inline-block;
+	// width: 50%;
+	// vertical-align:top;
+	// margin-bottom: 0.5em;
+	// @include mq(phone) {
+	// 	margin-top: 0;
+	// 	text-align:left;
+	// 	width: auto;
+	// }
 
 	ul {
 		margin: 0;

@@ -25,7 +25,7 @@
 <?php wp_head(); ?>
 </head>
 
-<body <?php body_class(); ?>  <?php if ( is_page( 16 ) || is_page( 342 ) ) { ?> onload="initialize()" <?php } ?>>
+<body <?php body_class(); ?>  <?php if ( is_page( 16 ) ) { ?> onload="initialize()" <?php } ?>>
 <div id="page" class="hfeed site">
 
 	<header id="masthead" class="site-header" role="banner">
@@ -39,12 +39,12 @@
 				<div class="bt-newsletter">
 					<a href="#block-newsletter" class="button-news-fancy">Newsletter</a>
 				</div><!--
-			--><div class="wrapper-menu-social">
+			--><div class="social-lang">
 					<?php get_template_part( 'menu', 'social' ); ?>
 					
 					<!-- #lang nav -->
 					<div class="menu-lang clearfix">
-						<?php //do_action('icl_language_selector'); ?>
+						<?php do_action('icl_language_selector'); ?>
 					</div>
 				</div><!-- .social-lang -->
 			</div><!-- .nav-social -->

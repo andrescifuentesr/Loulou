@@ -95,7 +95,7 @@ function loulou_scripts() {
 	wp_enqueue_script( 'loulou-modernizr', get_template_directory_uri() . '/js/libs/modernizr.custom.63353.js', array(), '20140515', false );
 
 	// Enqueue Google maps
-	if ( is_page( 16 ) ) {
+	if ( is_page( 16 ) || is_page( 342 ) ) {
 		wp_enqueue_script( 'sprit-GoogleMaps', 'https://maps.googleapis.com/maps/api/js?key=AIzaSyArEmbqneDepMsMr0aZAYE-XAVxRsl2B9E&sensor=false', false );
 	}
 	

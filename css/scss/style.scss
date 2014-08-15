@@ -42,9 +42,9 @@ html {
 
 body {
 	// Ala Trent Walton
-	@include css-hyphens(auto);
-	@extend %breakword;
-	background: #fff;
+//	@include css-hyphens(auto);
+//	@extend %breakword;
+	background: #F5EAD4;
 	color: $blue-principal;
 }
 

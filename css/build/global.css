@@ -936,10 +936,6 @@ object {
 /**
  * Pull classes, to move grid items back to the left by certain amounts.
  */
-body {
-  word-wrap: break-word;
-}
-
 p {
   margin: 0 0 1em;
 }
@@ -1648,22 +1644,6 @@ html[xmlns] .slides {
   }
 }
 
-.nav-social {
-  display: inline-block;
-  width: 25%;
-  vertical-align: top;
-}
-@media only screen and (min-width: 63em) and (max-width: 85em) {
-  .nav-social {
-    width: 20%;
-  }
-}
-@media (max-width: 40em) {
-  .nav-social {
-    width: 100%;
-  }
-}
-
 /*--------------------------------------------------------------
 5.2 Menus
 --------------------------------------------------------------*/
@@ -1928,7 +1908,15 @@ html[xmlns] .slides {
 5.1 Menus socail et langues, Newsletter
 --------------------------------------------------------------*/
 .nav-social {
+  display: inline-block;
+  width: 25%;
+  vertical-align: top;
   margin-top: 1.5em;
+}
+@media only screen and (min-width: 63em) and (max-width: 85em) {
+  .nav-social {
+    width: 20%;
+  }
 }
 @media (max-width: 40em) {
   .nav-social {
@@ -1974,19 +1962,42 @@ html[xmlns] .slides {
   opacity: 0.7;
 }
 
-.menu-social {
+.menu-lang {
+  position: absolute;
+  left: .5em;
+  top: 5.5em;
+}
+@media only screen and (min-width: 40em) and (max-width: 63em) {
+  .menu-lang {
+    top: 6em;
+  }
+}
+@media (max-width: 40em) {
+  .menu-lang {
+    top: 3em;
+    right: -60%;
+    left: auto;
+  }
+}
+.menu-lang #lang_sel_list a, .menu-lang #lang_sel_list a:visited {
+  background: transparent;
+}
+
+.wrapper-menu-social {
   display: inline-block;
   width: 50%;
   vertical-align: top;
   margin-bottom: 0.5em;
+  position: relative;
 }
 @media (max-width: 40em) {
-  .menu-social {
+  .wrapper-menu-social {
     margin-top: 0;
     text-align: left;
     width: auto;
   }
 }
+
 .menu-social ul {
   margin: 0;
   width: 56px;
@@ -2071,22 +2082,22 @@ html[xmlns] .slides {
 
 .template-general {
   width: 100%;
-  padding: 2em 20%;
-  background: url("../../../img/background-page-home.jpg") repeat-y top center #f5e7cc;
+  padding: 2em 20% 4em;
+  background: url("../../../img/background-page-home.jpg") repeat-y top center #f5ead4;
 }
 @media only screen and (min-width: 63em) and (max-width: 85em) {
   .template-general {
-    padding: 2em 15%;
+    padding: 2em 15% 4em;
   }
 }
 @media only screen and (min-width: 40em) and (max-width: 63em) {
   .template-general {
-    padding: 2em 5%;
+    padding: 2em 5% 4em;
   }
 }
 @media (max-width: 40em) {
   .template-general {
-    padding: 2em 1.5%;
+    padding: 2em 1.5% 4em;
   }
 }
 .template-general .site-main {
@@ -2167,10 +2178,10 @@ html[xmlns] .slides {
   }
 }
 
-.post-10 p {
+.post-10 p, .post-338 p {
   text-align: center;
 }
-.post-10 h2 {
+.post-10 h2, .post-338 h2 {
   color: #332c58;
   font-family: 'Mohave';
   font-style: normal;
@@ -2190,7 +2201,7 @@ html[xmlns] .slides {
   text-transform: uppercase;
 }
 
-.post-27 h2 {
+.post-27 h2, .post-324 h2 {
   color: #332c58;
   font-family: 'Mohave';
   font-style: normal;
@@ -2200,7 +2211,7 @@ html[xmlns] .slides {
   text-align: center;
   margin-bottom: 2em;
 }
-.post-27 p {
+.post-27 p, .post-324 p {
   text-align: center;
 }
 
@@ -2293,6 +2304,9 @@ html[xmlns] .slides {
 .contact #map_canvas {
   height: 250px;
   margin: 1em 0;
+}
+.contact a {
+  color: #dd0b14;
 }
 
 .wpcf7 {
@@ -2564,7 +2578,7 @@ html[xmlns] .slides {
   background: #000;
 }
 
-.post-14 {
+.post-14, .post-340 {
   position: relative;
   margin-top: 2em;
   width: 315px;
@@ -2575,20 +2589,20 @@ html[xmlns] .slides {
   transition: 0.3s all ease-out;
 }
 @media (max-width: 40em) {
-  .post-14 {
+  .post-14, .post-340 {
     width: 290px;
     padding: 2em 2em 0;
   }
 }
-.post-14 h5 {
+.post-14 h5, .post-340 h5 {
   padding-bottom: 0.5em;
   text-transform: uppercase;
   border-bottom: 1px solid #dd0b14;
 }
-.post-14 a {
+.post-14 a, .post-340 a {
   text-decoration: underline;
 }
-.post-14 .button-jays {
+.post-14 .button-jays, .post-340 .button-jays {
   position: absolute;
   display: block;
   background: url("../../../img/green-arrow-jays.svg") no-repeat;
@@ -2599,10 +2613,10 @@ html[xmlns] .slides {
   cursor: pointer;
   transition: 0.3s all ease-out;
 }
-.post-14 .wpcf7 input[type="submit"] {
+.post-14 .wpcf7 input[type="submit"], .post-340 .wpcf7 input[type="submit"] {
   top: 0;
 }
-.post-14 .wpcf7 textarea {
+.post-14 .wpcf7 textarea, .post-340 .wpcf7 textarea {
   height: 100px;
 }
 
@@ -2679,21 +2693,6 @@ html[xmlns] .slides {
   opacity: 0.8;
 }
 
-.site-footer {
-  background: url("../../../img/background-header.jpg") repeat-x white;
-  width: 100%;
-}
-.site-footer p {
-  text-align: center;
-  color: #fff;
-  font-size: 0.75em;
-  margin: 0;
-  padding: 0.2em;
-}
-.site-footer a {
-  text-decoration: underline;
-}
-
 *,
 *:after,
 *:before {
@@ -2707,12 +2706,7 @@ html {
 }
 
 body {
-  -webkit-hyphens: auto;
-  -moz-hyphens: auto;
-  -ms-hyphens: auto;
-  -o-hyphens: auto;
-  hyphens: auto;
-  background: #fff;
+  background: #F5EAD4;
   color: #332c58;
 }
 

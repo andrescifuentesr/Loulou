@@ -12,9 +12,9 @@
 
 	<footer id="colophon" class="site-footer" role="contentinfo">
 
-		<p class="bloc-mention">
+<!-- 		<p class="bloc-mention">
 			Food 2 Vous © <?php echo date('Y'); ?> | <a href="<?php echo esc_url( get_permalink( 269 ) ); ?>" class="">Mentions légales</a>
-		</p>
+		</p> -->
 
 		<div class="module-newsletter clearfix" id="block-newsletter">
 			<?php
