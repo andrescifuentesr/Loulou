@@ -44,7 +44,7 @@
 					
 					<!-- #lang nav -->
 					<div class="menu-lang clearfix">
-						<?php //do_action('icl_language_selector'); ?>
+						<?php do_action('icl_language_selector'); ?>
 					</div>
 				</div><!-- .social-lang -->
 			</div><!-- .nav-social -->

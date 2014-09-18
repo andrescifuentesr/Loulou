@@ -32,8 +32,6 @@
 					'thankyou' => 'Nous vous remercions de votre souscription à nôtre newsletter !'
 				);
 
-				/*
-
 				$argsEn = array(
 					'prepend' => '<h1>Newsletter</h1><p>Receive our notifications!</p>', 
 					'showname' => false,
@@ -53,10 +51,6 @@
 				} else {
 					echo smlsubform($argsEn);
 				}
-
-				*/
-
-				echo smlsubform($argsFr);
 			?>
 		</div>
 	</footer><!-- #colophon -->

@@ -32,9 +32,36 @@ switch ($postId) {
 	case '203': //Café Take away
 		$idCarte = '381922';
 		break;
-	//case '95': // boisson ??????
-	//	$idCarte = '350822';
-	//	break;
+	//====================
+	// Anglaise
+	//====================	
+	case '331': //Menu
+		$idCarte = '384196';
+		break;	
+	case '333': // Carte
+		$idCarte = '384196';
+		break;
+	case '353': // Petit Dej & Brunch FR
+		$idCarte = '384197';
+		break;
+	case '355': //Cafe FR
+		$idCarte = '384227';
+		break;
+	case '357': //Boissons FR
+		$idCarte = '384228';
+		break;
+	case '336': // Take Away
+		$idCarte = '384198';
+		break;
+	case '365': // Take away
+		$idCarte = '384198';
+		break;
+	case '367': // Coffee Take away:
+		$idCarte = '384229';
+		break;
+	//====================
+	// Default
+	//====================			
 	default:
 		$idCarte = '324962';
 		break;
