@@ -152,11 +152,11 @@ function displayMenuWeb($menu, $restaurant) {
 							}
 							?>
 						</div>
-<!-- 						<?php if ($category->description && $category->description != "") :?>
+ 						<?php if ($category->description && $category->description != "") :?>
 							<div class="cat-description"><?php echo $category->description; ?></div>
 						<?php else: ?>
-							<div class="cat-description">***</div>
-							<?php endif; ?> -->
+							<div class="cat-description"></div>
+							<?php endif; ?>
 					</div>
 					<div class="menu-sous-cat-container">
 					<?php
@@ -173,11 +173,11 @@ function displayMenuWeb($menu, $restaurant) {
 										<?php } ?>
 									</h3>
 								</div>
-<!-- 								<?php if ($subcategory->description && trim($subcategory->description) != ""):?>
+								<?php if ($subcategory->description && trim($subcategory->description) != ""):?>
 									<div class="sous-cat-description"><?php echo $subcategory->description; ?></div>
 								<?php else:?>
-									<div class="sous-cat-description">***</div>
-								<?php endif;?> -->
+									<div class="sous-cat-description"></div>
+								<?php endif;?>
 							</div>                  
 							<?php
 							if (isset($subcategory->dishes))
